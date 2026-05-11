@@ -71,11 +71,7 @@
               <h2 class="mb-2 pb-2 border-b-2 border-primary text-3xl text-primary font-bold">联系方式</h2>
               <div class="p-2">
                 <table>
-                  <tbody>
-                    <tr>
-                      <td>电子邮箱</td>
-                      <td>mcheyh [at] qq [dot] com</td>
-                    </tr>
+                  <tbody id="contact-table">
                   </tbody>
                 </table>
               </div>
@@ -146,8 +142,34 @@
     <script src="/framework-ab5e560ac056def5e6e8.js" async></script>
     <script src="/app-5d167fc958066626c284.js" async></script>
     <!-- slice-end id="_gatsby-scripts-1" -->
+     <script src="contact.js"></script>
      <script src="education.js"></script>
      <script src="contest.js"></script>
+
+<script>
+const contactTable = document.getElementById("contact-table");
+
+contacts.forEach(contact => {
+
+  let valueHtml = contact.value;
+
+  if (contact.link) {
+    valueHtml = `
+      <a href="${contact.link}" target="_blank">
+        ${contact.value}
+      </a>
+    `;
+  }
+
+  contactTable.innerHTML += `
+    <tr>
+      <td>${contact.type}</td>
+      <td>${valueHtml}</td>
+    </tr>
+  `;
+});
+</script>
+
 
 <script>
 const educationTable = document.getElementById("education-table");
