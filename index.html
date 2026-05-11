@@ -143,9 +143,17 @@
     <script src="/framework-ab5e560ac056def5e6e8.js" async></script>
     <script src="/app-5d167fc958066626c284.js" async></script>
     <!-- slice-end id="_gatsby-scripts-1" -->
-     <script src="./contact.js"></script>
-     <script src="./education.js"></script>
-     <script src="./contest.js"></script>
+     <script>
+document.write('<script src="./contact.js?v=' + Date.now() + '"><\/script>');
+</script>
+
+<script>
+document.write('<script src="./education.js?v=' + Date.now() + '"><\/script>');
+</script>
+
+<script>
+document.write('<script src="./contest.js?v=' + Date.now() + '"><\/script>');
+</script>
 
 <script>
 const contactTable = document.getElementById("contact-table");
