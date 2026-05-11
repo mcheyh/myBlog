@@ -121,25 +121,35 @@
             </section>
           </main>
           <footer class="mt-16 border-t-2 border-primary">
-            <div class="grid grid-rows-1 md:grid-rows-2 md:grid-flow-col pt-4 md:pt-2 gap-4 md:gap-2">
-              <div class="text-center md:text-left">
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copyright" class="svg-inline--fa fa-copyright w-4 mx-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM199.4 312.6c31.2 31.2 81.9 31.2 113.1 0c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9c-50 50-131 50-181 0s-50-131 0-181s131-50 181 0c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0c-31.2-31.2-81.9-31.2-113.1 0s-31.2 81.9 0 113.1z"></path>
-                </svg>2026 - 2026，赫宇航，没有版权
-              </div>
-              <div class="text-center md:text-left">
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="calendar" class="svg-inline--fa fa-calendar w-4 mx-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                  <path fill="currentColor" d="M96 32l0 32L48 64C21.5 64 0 85.5 0 112l0 48 448 0 0-48c0-26.5-21.5-48-48-48l-48 0 0-32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 32L160 64l0-32c0-17.7-14.3-32-32-32S96 14.3 96 32zM448 192L0 192 0 464c0 26.5 21.5 48 48 48l352 0c26.5 0 48-21.5 48-48l0-272z"></path>
-                </svg>最后更新日期：2026年05月11日
-              </div>
-              <div class="text-center md:text-right">
-                <a href="https://www.baidu.com" target="_blank" rel="noreferrer">没有ICP备案</a>
-              </div>
-              <div class="text-center md:text-right">
-                <a href="https://www.baidu.com" target="_blank" rel="noreferrer">没有公安网备</a>
-              </div>
-            </div>
-          </footer>
+  <div class="grid grid-rows-1 md:grid-rows-2 md:grid-flow-col pt-4 md:pt-2 gap-4 md:gap-2">
+    
+    <!-- 第一行左侧：2026部分 -->
+    <!-- 增加 flex items-center 确保图标和文字垂直居中且不换行 -->
+    <div class="flex items-center justify-center md:justify-start">
+      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copyright" class="svg-inline--fa fa-copyright w-4 mx-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM199.4 312.6c31.2 31.2 81.9 31.2 113.1 0c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9c-50 50-131 50-181 0s-50-131 0-181s131-50 181 0c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0c-31.2-31.2-81.9-31.2-113.1 0s-31.2 81.9 0 113.1z"></path>
+      </svg>
+      <span>2026 - 2026，赫宇航，没有版权</span>
+    </div>
+
+    <!-- 第二行左侧：更新日期部分 -->
+    <div class="flex items-center justify-center md:justify-start">
+      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="calendar" class="svg-inline--fa fa-calendar w-4 mx-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path fill="currentColor" d="M96 32l0 32L48 64C21.5 64 0 85.5 0 112l0 48 448 0 0-48c0-26.5-21.5-48-48-48l-48 0 0-32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 32L160 64l0-32c0-17.7-14.3-32-32-32S96 14.3 96 32zM448 192L0 192 0 464c0 26.5 21.5 48 48 48l352 0c26.5 0 48-21.5 48-48l0-272z"></path>
+      </svg>
+      <span>最后更新日期：2026年05月11日</span>
+    </div>
+
+    <!-- 右侧：备案信息（保持 text-right） -->
+    <div class="text-center md:text-right">
+      <a href="https://www.baidu.com" target="_blank" rel="noreferrer">没有ICP备案</a>
+    </div>
+    <div class="text-center md:text-right">
+      <a href="https://www.baidu.com" target="_blank" rel="noreferrer">没有公安网备</a>
+    </div>
+    
+  </div>
+</footer>
         </div>
       </div>
       <div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div>
