@@ -220,7 +220,7 @@ contests.forEach(contest => {
         ${contest.time}
       </td>
 
-      <td colspan="4" class="md:!pl-0">
+      <td colspan="4" class="md:!pl-0 font-bold text-black">
   ${contest.organization}
 
   ${contest.link ? `
@@ -235,7 +235,7 @@ contests.forEach(contest => {
   contest.awards.forEach(award => {
     html += `
       <tr>
-        <td>${award[0]}</td>
+        <td class="font-bold">${award[0]}</td>
         <td>${award[1]}</td>
       </tr>
     `;
