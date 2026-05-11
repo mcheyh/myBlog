@@ -13,7 +13,7 @@ const contacts = [
   {
     type: "博客",
     value: "赫宇航",
-    link: "https://mcheyh.github.io/"
+    link: "https://mcheyh.github.io/myBlog"
   },
 
   {
