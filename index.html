@@ -221,9 +221,14 @@ contests.forEach(contest => {
       </td>
 
       <td colspan="4" class="md:!pl-0">
-        ${contest.organization}
-        [<a href="${contest.link}">OIerDb</a>]
-      </td>
+  ${contest.organization}
+
+  ${contest.link ? `
+    [<a href="${contest.link}">
+      ${contest.linkName}
+    </a>]
+  ` : ""}
+</td>
     </tr>
   `;
 
