@@ -84,25 +84,7 @@
               <h2 class="mb-2 pb-2 border-b-2 border-primary text-3xl text-primary font-bold">教育经历</h2>
               <div class="p-2">
                 <table>
-                  <tbody>
-                    <tr>
-                      <td><a href="https://www.tsinghua.edu.cn/">To be or not to be</a></td>
-                      <td>ToDo</td>
-                      <td>ToDo</td>
-                      <td>ToDo</td>
-                    </tr>
-                    <tr>
-                      <td><a href="https://weidianzi.nwpu.edu.cn/">西北工业大学集成电路学院</a></td>
-                      <td>本科</td>
-                      <td>工学学士在读</td>
-                      <td>集成电路设计与集成系统</td>
-                    </tr>
-                    <tr>
-                      <td><a href="https://kz.ksecloud.cn">江苏省昆山中学</a></td>
-                      <td>高中</td>
-                      <td>高中学历</td>
-                      <td></td>
-                    </tr>
+                  <tbody id = "education-table">
                   </tbody>
                 </table>
               </div>
@@ -111,24 +93,7 @@
               <h2 class="mb-2 pb-2 border-b-2 border-primary text-3xl text-primary font-bold">竞赛科研情况</h2>
               <div class="p-2">
                 <table>
-                  <tbody>
-                    <tr>
-                      <td rowspan="4" class="align-top">2022年9月 — 2025年6月</td>
-                      <td colSpan="4" class="md:!pl-0">江苏省昆山中学 信息学竞赛 [<a href="https://oier.baoshuo.dev/oier/164863">OIerDb</a>]</td>
-                    </tr>
-                    <tr>
-                      <td>NOIP</td>
-                      <td>省二 2 次</td>
-                    </tr>
-                    <tr>
-                      <td>CSP-S</td>
-                      <td>二等 2 次</td>
-                    </tr>
-                    <tr>
-                      <td>CSP-J</td>
-                      <td>一等 1 次</td>
-                    </tr>
-                  </tbody>
+                  <tbody id="contest-table">
                 </table>
               </div>
             </section>
@@ -181,5 +146,67 @@
     <script src="/framework-ab5e560ac056def5e6e8.js" async></script>
     <script src="/app-5d167fc958066626c284.js" async></script>
     <!-- slice-end id="_gatsby-scripts-1" -->
+     <script src="education.js"></script>
+     <script src="contest.js"></script>
+
+<script>
+const educationTable = document.getElementById("education-table");
+
+educations.forEach(edu => {
+
+  educationTable.innerHTML += `
+    <tr>
+      <td>
+        <a href="${edu.link}">
+          ${edu.school}
+        </a>
+      </td>
+
+      <td>
+        ${edu.degree}
+      </td>
+
+      <td>
+        ${edu.status}
+      </td>
+
+      <td>
+        ${edu.major}
+      </td>
+    </tr>
+  `;
+});
+</script>
+
+     <script>
+const tbody = document.getElementById("contest-table");
+
+contests.forEach(contest => {
+
+  let html = `
+    <tr>
+      <td rowspan="${contest.awards.length + 1}" class="align-top">
+        ${contest.time}
+      </td>
+
+      <td colspan="4" class="md:!pl-0">
+        ${contest.organization}
+        [<a href="${contest.link}">OIerDb</a>]
+      </td>
+    </tr>
+  `;
+
+  contest.awards.forEach(award => {
+    html += `
+      <tr>
+        <td>${award[0]}</td>
+        <td>${award[1]}</td>
+      </tr>
+    `;
+  });
+
+  tbody.innerHTML += html;
+});
+</script>
   </body>
 </html>
