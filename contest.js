@@ -23,7 +23,7 @@ const contests = [
   {
     time: "2026年1月",
     organization: "西北工业大学",
-    link: "https://www.comap-math.com/mcm/2026Certs/2626001.pdf",
+    link: "https://www.comap-math.org/mcm/2026Certs/2626001.pdf",
     linkName: "证书",
     awards: [
       ["国际大学生数学建模竞赛", "Honorable Mention"]
