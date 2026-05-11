@@ -1,7 +1,7 @@
 const contacts = [
   {
     type: "电子邮箱",
-    value: "mcheyh [at] qq [dot] com"
+    value: "mcheyh@mail.nwpu.edu.cn"
   },
 
   {
@@ -12,7 +12,14 @@ const contacts = [
 
   {
     type: "博客",
-    value: "个人主页",
+    value: "赫宇航",
     link: "https://mcheyh.github.io/"
+  },
+
+  {
+    type: "Bilibili",
+    vale: "个人主页",
+    link: "https://space.bilibili.com/285015360"
   }
+  
 ];
