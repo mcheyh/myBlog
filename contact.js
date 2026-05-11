@@ -18,7 +18,7 @@ const contacts = [
 
   {
     type: "Bilibili",
-    vale: "个人主页",
+    value: "个人主页",
     link: "https://space.bilibili.com/285015360"
   }
   
