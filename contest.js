@@ -10,7 +10,7 @@ const contests = [
   {
     time: "2025年12月",
     awards: [
-      ["中国计算机学会软件能力认证", "290分 全国前4.33%","https://www.cspro.org/","比赛官网"]
+      ["中国计算机学会软件能力认证", "290分 全国前4.33%","https://www.cspro.org/","官网"]
     ]
   },
   
@@ -23,7 +23,7 @@ const contests = [
   {
     time: "2026年4月",
     awards: [
-      ["团体程序设计天梯赛", "全国二等奖","https://static.pintia.cn/assets/gplt/rank-page-archive-2026/school.html","比赛榜单"],
+      ["团体程序设计天梯赛", "全国二等奖","https://gplt.patest.cn/","比赛官网"],
       ["西北工业大学程序设计能力竞赛", "一等奖"]
     ]
   }
