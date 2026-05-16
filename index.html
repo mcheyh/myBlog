@@ -198,9 +198,11 @@ table td{
   padding-left:0;
 }
 
-#contest-table td:nth-child(2),
-#contest-table td:nth-child(3){
+table td + td{
   padding-left:3rem;
+}
+.no-indent{
+  padding-left:0 !important;
 }
 
 /* ---------- spacing ---------- */
@@ -643,7 +645,7 @@ contests.forEach(contest => {
           ${contest.time}
         </td>
 
-        <td colspan="2" class="md:!pl-0 font-bold text-black">
+        <td colspan="2" class="no-indent font-bold text-black">
           ${contest.organization}
         </td>
       </tr>
