@@ -23,14 +23,10 @@ const contests = [
   {
     time: "2026年4月",
     awards: [
-      ["团体程序设计天梯赛", "全国二等奖","https://static.pintia.cn/assets/gplt/rank-page-archive-2026/school.html","比赛榜单"]
-    ]
-  },
-  {
-    time: "2026年4月",
-    awards: [
+      ["团体程序设计天梯赛", "全国二等奖","https://static.pintia.cn/assets/gplt/rank-page-archive-2026/school.html","比赛榜单"],
       ["西北工业大学程序设计能力竞赛", "一等奖"]
     ]
   }
+
   
 ];
