@@ -10,17 +10,15 @@ const contests = [
 
   {
     time: "2025年9月 - ",
-    organization: "西北工业大学 算法竞赛",
-    awards: [
-      ["西北工业大学程序设计能力竞赛", "一等奖"],
-      ["团体程序设计天梯赛", "二等奖"]
-    ]
+    organization: "西北工业大学",
   },
-
+  
   {
     time: "2026年1月",
     awards: [
-      ["国际大学生数学建模竞赛", "Honorable Mention","https://www.comap-math.org/mcm/2026Certs/2626001.pdf","证书"]
+      ["国际大学生数学建模竞赛", "Honorable Mention","https://www.comap-math.org/mcm/2026Certs/2626001.pdf","证书"],
+      ["西北工业大学程序设计能力竞赛", "一等奖"],
+      ["团体程序设计天梯赛", "二等奖"]
     ]
   }
 ];
