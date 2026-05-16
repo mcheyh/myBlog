@@ -10,20 +10,20 @@ const contests = [
   {
     time: "2025年12月",
     awards: [
-      ["中国计算机学会软件能力认证", "290分 全国前4.33%"]
+      ["中国计算机学会软件能力认证", "290分 全国前4.33%","https://www.cspro.org/","比赛官网"]
     ]
   },
   
   {
     time: "2026年1月",
     awards: [
-      ["国际大学生数学建模竞赛", "Honorable Mention","https://www.comap-math.org/mcm/2026Certs/2626001.pdf","证书"]
+      ["国际大学生数学建模竞赛", "Honorable Mention","https://www.comap-math.org/mcm/2026Certs/2626001.pdf","获奖证书"]
     ]
   },
   {
     time: "2026年4月",
     awards: [
-      ["团体程序设计天梯赛", "全国二等奖"]
+      ["团体程序设计天梯赛", "全国二等奖","https://static.pintia.cn/assets/gplt/rank-page-archive-2026/school.html","比赛榜单"]
     ]
   },
   {
