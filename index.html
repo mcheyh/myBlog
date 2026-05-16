@@ -226,35 +226,32 @@ contests.forEach(contest => {
           ${contest.time}
         </td>
 
-        <td colspan="4" class="md:!pl-0 font-bold text-black">
+        <td colspan="2" class="md:!pl-0 font-bold text-black">
           ${contest.organization}
-
-
         </td>
       </tr>
     `;
 
-contest.awards.forEach(award => {
+    contest.awards.forEach(award => {
 
-  let awardHtml = award[1];
+      let awardHtml = award[1];
 
-  // award 有链接
-  if (award[2]) {
+      // award 有链接
+      if (award[2]) {
+        awardHtml += `
+          [<a href="${award[2]}" target="_blank">
+            ${award[3]}
+          </a>]
+        `;
+      }
 
-    awardHtml += `
-      [<a href="${award[2]}" target="_blank">
-        ${award[3]}
-      </a>]
-    `;
-  }
-
-  html += `
-    <tr>
-      <td>${award[0]}</td>
-      <td>${awardHtml}</td>
-    </tr>
-  `;
-});
+      html += `
+        <tr>
+          <td>${award[0]}</td>
+          <td>${awardHtml}</td>
+        </tr>
+      `;
+    });
 
   }
 
@@ -263,8 +260,20 @@ contest.awards.forEach(award => {
 
     contest.awards.forEach((award, index) => {
 
+      let awardHtml = award[1];
+
+      // award 有链接
+      if (award[2]) {
+        awardHtml += `
+          [<a href="${award[2]}" target="_blank">
+            ${award[3]}
+          </a>]
+        `;
+      }
+
       html += `
         <tr>
+
           ${index === 0 ? `
             <td rowspan="${contest.awards.length}" class="align-top">
               ${contest.time}
@@ -272,7 +281,9 @@ contest.awards.forEach(award => {
           ` : ""}
 
           <td>${award[0]}</td>
-          <td>${award[1]}</td>
+
+          <td>${awardHtml}</td>
+
         </tr>
       `;
     });
