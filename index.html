@@ -238,10 +238,12 @@ contest.awards.forEach(award => {
 
   let awardHtml = award[1];
 
-  if (contest.link) {
+  // award 有链接
+  if (award[2]) {
+
     awardHtml += `
-      [<a href="${contest.link}" target="_blank">
-        ${contest.linkName}
+      [<a href="${award[2]}" target="_blank">
+        ${award[3]}
       </a>]
     `;
   }
