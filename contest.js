@@ -7,11 +7,6 @@ const contests = [
       ["CSP-S", "二等","https://oier.baoshuo.dev/oier/164863","OIerDb"]
     ]
   },
-
-  {
-    time: "2025年9月 - ",
-    organization: "西北工业大学",
-  },
   
   {
     time: "2026年1月",
