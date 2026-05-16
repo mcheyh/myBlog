@@ -210,37 +210,65 @@ educations.forEach(edu => {
 });
 </script>
 
-     <script>
+<script>
 const tbody = document.getElementById("contest-table");
 
 contests.forEach(contest => {
 
-  let html = `
-    <tr>
-      <td rowspan="${contest.awards.length + 1}" class="align-top">
-        ${contest.time}
-      </td>
+  let html = "";
 
-      <td colspan="4" class="md:!pl-0 font-bold text-black">
-  ${contest.organization}
+  // 有 organization
+  if (contest.organization) {
 
-  ${contest.link ? `
-    [<a href="${contest.link}">
-      ${contest.linkName}
-    </a>]
-  ` : ""}
-</td>
-    </tr>
-  `;
-
-  contest.awards.forEach(award => {
     html += `
       <tr>
-        <td>${award[0]}</td>
-        <td>${award[1]}</td>
+        <td rowspan="${contest.awards.length + 1}" class="align-top">
+          ${contest.time}
+        </td>
+
+        <td colspan="4" class="md:!pl-0 font-bold text-black">
+          ${contest.organization}
+
+          ${contest.link ? `
+            [<a href="${contest.link}">
+              ${contest.linkName}
+            </a>]
+          ` : ""}
+        </td>
       </tr>
     `;
-  });
+
+    contest.awards.forEach(award => {
+      html += `
+        <tr>
+          <td>${award[0]}</td>
+          <td>${award[1]}</td>
+        </tr>
+      `;
+    });
+
+  }
+
+  // 没有 organization
+  else {
+
+    contest.awards.forEach((award, index) => {
+
+      html += `
+        <tr>
+          ${index === 0 ? `
+            <td rowspan="${contest.awards.length}" class="align-top">
+              ${contest.time}
+            </td>
+          ` : ""}
+
+          <td>${award[0]}</td>
+          <td>${award[1]}</td>
+        </tr>
+      `;
+    });
+
+  }
 
   tbody.innerHTML += html;
 });
