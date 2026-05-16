@@ -229,23 +229,30 @@ contests.forEach(contest => {
         <td colspan="4" class="md:!pl-0 font-bold text-black">
           ${contest.organization}
 
-          ${contest.link ? `
-            [<a href="${contest.link}">
-              ${contest.linkName}
-            </a>]
-          ` : ""}
+
         </td>
       </tr>
     `;
 
-    contest.awards.forEach(award => {
-      html += `
-        <tr>
-          <td>${award[0]}</td>
-          <td>${award[1]}</td>
-        </tr>
-      `;
-    });
+contest.awards.forEach(award => {
+
+  let awardHtml = award[1];
+
+  if (contest.link) {
+    awardHtml += `
+      [<a href="${contest.link}" target="_blank">
+        ${contest.linkName}
+      </a>]
+    `;
+  }
+
+  html += `
+    <tr>
+      <td>${award[0]}</td>
+      <td>${awardHtml}</td>
+    </tr>
+  `;
+});
 
   }
 
