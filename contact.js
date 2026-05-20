@@ -13,13 +13,7 @@ const contacts = [
   {
     type: "博客",
     value: "赫宇航",
-    link: "https://mcheyh.github.io/myBlog"
-  },
-
-  {
-    type: "Bilibili",
-    value: "个人主页",
-    link: "https://space.bilibili.com/285015360"
+    link: "./"
   }
   
 ];
