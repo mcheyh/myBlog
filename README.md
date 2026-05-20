@@ -1,3 +1,2 @@
-# myBlog
-my blog html
-!embed[[Hello](https://mcheyh.github.io/myBlog/)]
+# Blog
+[Hello! This is my blog.](https://mcheyh.github.io/myBlog/)
