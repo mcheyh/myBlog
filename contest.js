@@ -24,7 +24,7 @@ const contests = [
     time: "2026年4月",
     awards: [
       ["团体程序设计天梯赛", "全国二等奖","https://gplt.patest.cn/","比赛官网"],
-      ["西北工业大学程序设计能力竞赛", "一等奖"]
+      ["西北工业大学程序设计能力竞赛", "一等奖","https://jsj.nwpu.edu.cn/info/1599/29645.htm","获奖名单"]
     ]
   }
 
