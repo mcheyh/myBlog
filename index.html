@@ -5,8 +5,7 @@
     <meta charSet="utf-8"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="generator" content="Gatsby 5.13.7"/>
-    <style data-href="/styles.454a1a0981139af42252.css" data-identity="gatsby-global-css">
+    <style>
       /*
       ! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
       */
@@ -42,11 +41,19 @@ html{
   tab-size:4;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   margin:0;
   line-height:inherit;
   font-size:1rem;
-  background-color:rgb(249 249 249);
+  background-color:#d5cdd3;
+  background-image:url('bg.jpg');
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
 }
 
 hr{
@@ -430,9 +437,296 @@ table td + td{
     margin-top:0;
   }
 }
-    </style>
-    <style>
-      .gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}
+    /* ---------- sticky header ---------- */
+
+    .sticky-header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,255,255,0.78);
+      backdrop-filter:blur(20px);
+      -webkit-backdrop-filter:blur(20px);
+      border-bottom:1px solid rgba(152,44,97,0.15);
+      box-shadow:0 1px 8px rgba(0,0,0,0.05);
+    }
+
+    .header-inner{
+      max-width:56rem;
+      margin:0 auto;
+      padding:0.75rem 1.5rem;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap:0.5rem 1rem;
+    }
+
+    .header-title{
+      font-size:1.15rem;
+      font-weight:700;
+      color:#1f2937;
+      text-decoration:none;
+      white-space:nowrap;
+      transition:color 0.2s;
+    }
+
+    .header-title:hover{
+      color:rgb(152 44 97);
+    }
+
+    /* ---------- nav ---------- */
+
+    .nav-menu{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:0.25rem 1.5rem;
+    }
+
+    .nav-menu a{
+      display:inline-block;
+      padding:0.4rem 0.2rem;
+      font-size:0.9rem;
+      font-weight:500;
+      color:#4b5563;
+      text-decoration:none;
+      border-bottom:2px solid transparent;
+      transition:color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .nav-menu a:hover{
+      color:rgb(152 44 97);
+      border-bottom-color:rgb(152 44 97);
+    }
+
+    @media (max-width:640px){
+      .header-inner{
+        justify-content:center;
+        text-align:center;
+      }
+    }
+
+    /* ---------- about ---------- */
+
+    .about-intro{
+      font-size:1.125rem;
+      line-height:1.75;
+      color:#374151;
+      text-align:center;
+      max-width:42rem;
+      margin:0 auto 1.5rem auto;
+    }
+
+    .hobby-grid{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:1rem;
+    }
+
+    .hobby-card{
+      background:white;
+      border:1px solid #e5e7eb;
+      border-radius:12px;
+      padding:1.25rem 1.5rem;
+      width:calc(50% - 0.5rem);
+      max-width:260px;
+      text-align:center;
+      box-shadow:0 1px 3px rgba(0,0,0,0.06);
+      transition:transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .hobby-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    .hobby-icon{
+      font-size:2rem;
+      display:block;
+      margin-bottom:0.5rem;
+    }
+
+    .hobby-name{
+      font-weight:700;
+      color:rgb(152 44 97);
+      margin-bottom:0.25rem;
+    }
+
+    .hobby-desc{
+      font-size:0.875rem;
+      color:#6b7280;
+      line-height:1.5;
+    }
+
+    @media (max-width:640px){
+      .hobby-card{
+        width:100%;
+        max-width:100%;
+      }
+    }
+
+    /* ---------- works ---------- */
+
+    .works-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+      gap:1.5rem;
+    }
+
+    .work-card{
+      background:white;
+      border-radius:12px;
+      overflow:hidden;
+      border:1px solid #e5e7eb;
+      box-shadow:0 1px 3px rgba(0,0,0,0.06);
+      transition:transform 0.25s ease, box-shadow 0.25s ease;
+      cursor:pointer;
+      text-decoration:none;
+      color:inherit;
+      display:block;
+    }
+
+    .work-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 12px 30px rgba(0,0,0,0.13);
+    }
+
+    .work-cover{
+      width:100%;
+      aspect-ratio:16 / 9;
+      object-fit:cover;
+      display:block;
+      background:#f3f4f6;
+    }
+
+    .work-info{
+      padding:1rem 1.25rem;
+    }
+
+    .work-title{
+      font-weight:600;
+      font-size:0.95rem;
+      line-height:1.4;
+      color:#1f2937;
+      display:-webkit-box;
+      -webkit-line-clamp:2;
+      -webkit-box-orient:vertical;
+      overflow:hidden;
+    }
+
+    .work-desc{
+      font-size:0.8rem;
+      color:#9ca3af;
+      margin-top:0.25rem;
+    }
+
+    @media (max-width:768px){
+      .works-grid{
+        grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));
+      }
+    }
+
+    @media (max-width:480px){
+      .works-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    /* ---------- common section ---------- */
+
+    .section-desc{
+      text-align:center;
+      color:#6b7280;
+      font-size:0.95rem;
+      margin-bottom:1.5rem;
+    }
+
+    /* ---------- video modal ---------- */
+
+    .modal-overlay{
+      display:none;
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.75);
+      z-index:9999;
+      justify-content:center;
+      align-items:center;
+      animation:fadeIn 0.2s ease;
+    }
+
+    .modal-overlay.active{
+      display:flex;
+    }
+
+    .modal-box{
+      position:relative;
+      width:90vw;
+      max-width:900px;
+      background:#000;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 20px 60px rgba(0,0,0,0.5);
+      animation:scaleIn 0.25s ease;
+    }
+
+    .modal-close{
+      position:absolute;
+      top:10px;
+      right:16px;
+      z-index:10;
+      background:rgba(0,0,0,0.6);
+      color:#fff;
+      border:none;
+      font-size:28px;
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      cursor:pointer;
+      line-height:40px;
+      text-align:center;
+      transition:background 0.2s;
+    }
+
+    .modal-close:hover{
+      background:rgba(255,255,255,0.25);
+    }
+
+    .modal-player{
+      width:100%;
+      aspect-ratio:16 / 9;
+      border:none;
+      display:block;
+    }
+
+    @keyframes fadeIn{
+      from{opacity:0}
+      to{opacity:1}
+    }
+
+    @keyframes scaleIn{
+      from{transform:scale(0.92);opacity:0}
+      to{transform:scale(1);opacity:1}
+    }
+
+    /* ---------- frosted glass card ---------- */
+
+    .glass-card{
+      background:rgba(255,255,255,0.72);
+      backdrop-filter:blur(24px);
+      -webkit-backdrop-filter:blur(24px);
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,0.55);
+      box-shadow:0 8px 50px rgba(0,0,0,0.10), 0 1px 3px rgba(0,0,0,0.05);
+      padding:2rem 2.5rem;
+    }
+
+    @media (max-width:640px){
+      .glass-card{
+        border-radius:12px;
+        padding:1.25rem 1rem;
+      }
+    }
     </style>
     <style>
     svg{
@@ -441,53 +735,38 @@ table td + td{
     }
     </style>
 
-    <noscript>
-      <style>
-        .gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}
-      </style>
-          <style>
-    footer svg{
-    display:inline-block;
-    vertical-align:middle;
-    }
-    </style>
-    </noscript>
-    <script type="module">
-      const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);
-    </script>
   </head>
   <body>
-    <div id="___gatsby">
-      <div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
-        <div class="container max-w-4xl px-5 mx-auto my-12">
-          <header class="mb-8 space-y-4">
-            <div>
-              <div class="text-bold text-black hover:text-black text-center md:text-left">
-                <h1 class="text-4xl font-bold">赫宇航的个人博客</h1>
-              </div>
-            </div>
-            <div class="block md:flex space-y-4 md:space-y-0 py-4 md:py-0 border-b-2 border-primary">
-              <nav class="block md:flex w-full space-y-4 md:space-y-0 md:space-x-4 text-center md:justify-start">
-                <div>
-                  <a aria-current="page" class="" href="./">
-                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" class="svg-inline--fa fa-user w-4 mx-1 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                      <path fill="currentColor" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"></path>
-                    </svg>个人简介
-                  </a>
-                </div>
-              </nav>
-            </div>
-          </header>
+    <header class="sticky-header">
+      <div class="header-inner">
+        <a href="#" class="header-title">赫宇航的个人博客</a>
+        <nav class="nav-menu">
+          <a href="#about">关于我</a>
+          <a href="#contact">联系方式</a>
+          <a href="#education">教育经历</a>
+          <a href="#contest">竞赛科研</a>
+          <a href="#works">作品展示</a>
+        </nav>
+      </div>
+    </header>
+    <div class="container max-w-4xl mx-auto my-12 glass-card">
           <main class="grid my-16 gap-y-12">
             <div class="text-center">
               <div class="w-[calc(100%-2rem)] md:w-3/4 mx-auto">
-                <img src="https://cdn.jsdelivr.net/gh/mcheyh/myBlog/profile.jpg" alt="个人照片" style="width:100%; max-width:100%; border-radius:12px; display:block;">
+                <img src="profile.jpg" alt="个人照片" style="width:100%; max-width:100%; border-radius:12px; display:block;">
               </div>
               <div class="mt-2">
                 <p>2026年2月于大连</p>
               </div>
             </div>
-            <section>
+            <section id="about">
+              <h2 class="mb-2 pb-2 border-b-2 border-primary text-3xl text-primary font-bold">关于我</h2>
+              <div class="p-2">
+                <p id="about-intro" class="about-intro"></p>
+                <div id="hobby-grid" class="hobby-grid"></div>
+              </div>
+            </section>
+            <section id="contact">
               <h2 class="mb-2 pb-2 border-b-2 border-primary text-3xl text-primary font-bold">联系方式</h2>
               <div class="p-2">
                 <table>
@@ -496,7 +775,7 @@ table td + td{
                 </table>
               </div>
             </section>
-            <section>
+            <section id="education">
               <h2 class="mb-2 pb-2 border-b-2 border-primary text-3xl text-primary font-bold">教育经历</h2>
               <div class="p-2">
                 <table>
@@ -505,7 +784,7 @@ table td + td{
                 </table>
               </div>
             </section>
-            <section>
+            <section id="contest">
               <h2 class="mb-2 pb-2 border-b-2 border-primary text-3xl text-primary font-bold">竞赛科研情况</h2>
               <div class="p-2">
                 <table>
@@ -514,10 +793,22 @@ table td + td{
                 </table>
               </div>
             </section>
+            <section id="works">
+              <h2 class="mb-2 pb-2 border-b-2 border-primary text-3xl text-primary font-bold">作品展示</h2>
+              <p class="section-desc">
+                我在B站发布了 <strong id="work-count">0</strong> 个视频 &nbsp;|&nbsp;
+                <a href="https://space.bilibili.com/285015360" target="_blank" style="color:rgb(152 44 97);">
+                  访问我的B站主页 →
+                </a>
+              </p>
+              <div class="p-2">
+                <div id="works-grid" class="works-grid"></div>
+              </div>
+            </section>
           </main>
           <footer class="mt-16 border-t-2 border-primary">
   <div class="grid grid-rows-1 md:grid-rows-2 md:grid-flow-col pt-4 md:pt-2 gap-4 md:gap-2">
-    
+
     <!-- 第一行左侧：2026部分 -->
     <!-- 增加 flex items-center 确保图标和文字垂直居中且不换行 -->
     <div class="flex items-center justify-center md:justify-start">
@@ -542,28 +833,11 @@ table td + td{
     <div class="text-center md:text-right">
       <a href="https://www.baidu.com" target="_blank" rel="noreferrer">没有公安网备</a>
     </div>
-    
+
   </div>
 </footer>
         </div>
-      </div>
-      <div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div>
-    </div>
-    <script id="gatsby-script-loader">
-      /*<![CDATA[*/window.pagePath="/";/*]]>*/
-    </script>
-    <!-- slice-start id="_gatsby-scripts-1" -->
-    <script id="gatsby-chunk-mapping">
-      window.___chunkMapping="{\"app\":[\"/app-5d167fc958066626c284.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-9fcc7dfa781ebfb3702f.js\"],\"component---src-pages-go-course-tsx\":[\"/component---src-pages-go-course-tsx-3693ac833ffe4668ebc4.js\"],\"component---src-pages-go-edit-tsx\":[\"/component---src-pages-go-edit-tsx-e415f1b33dc6a97fc293.js\"],\"component---src-pages-go-play-tsx\":[\"/component---src-pages-go-play-tsx-2836838c5e9a03fc93de.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-e59732b78827e45dced7.js\"]}";
-    </script>
     <script>
-      window.___webpackCompilationHash="9a6f1b3bc5d7fdcec1ba";
-    </script>
-    <script src="/webpack-runtime-d26d224561c4a0967955.js" async></script>
-    <script src="/framework-ab5e560ac056def5e6e8.js" async></script>
-    <script src="/app-5d167fc958066626c284.js" async></script>
-    <!-- slice-end id="_gatsby-scripts-1" -->
-     <script>
 document.write('<script src="./contact.js?v=' + Date.now() + '"><\/script>');
 </script>
 
@@ -711,6 +985,175 @@ contests.forEach(contest => {
 
   tbody.innerHTML += html;
 });
+</script>
+
+<!-- ========== 视频播放模态框 ========== -->
+<div class="modal-overlay" id="video-modal">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close">&times;</button>
+    <iframe class="modal-player" id="modal-player" src="" allowfullscreen allow="autoplay"></iframe>
+  </div>
+</div>
+
+<!-- ========== 加载 works.js（静态数据） ========== -->
+<script>
+document.write('<script src="./works.js?v=' + Date.now() + '"><\/script>');
+</script>
+
+<!-- ========== 加载 bilibili.js（API 签名 + JSONP） ========== -->
+<script>
+document.write('<script src="./bilibili.js?v=' + Date.now() + '"><\/script>');
+</script>
+
+<!-- ========== 渲染「作品展示」板块（先用静态数据，API 成功后自动更新） ========== -->
+<script>
+(function() {
+  var rendered = false;
+
+  function renderWorks(list) {
+    if (rendered) return;
+    rendered = true;
+
+    var grid = document.getElementById('works-grid');
+    var countEl = document.getElementById('work-count');
+
+    if (!list || list.length === 0) {
+      grid.innerHTML = '<p style="text-align:center;color:#9ca3af;padding:2rem;">暂无作品展示，请稍后刷新</p>';
+      return;
+    }
+
+    countEl.textContent = list.length;
+
+    // 根据视频数量动态调整网格列的最小宽度
+    var minWidth = 300;
+    if (list.length <= 2) minWidth = 400;
+    else if (list.length <= 4) minWidth = 340;
+    else if (list.length >= 9) minWidth = 260;
+    grid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(' + minWidth + 'px, 1fr))';
+
+    list.forEach(function(w) {
+      var card = document.createElement('div');
+      card.className = 'work-card';
+
+      // 点击弹出播放器
+      card.addEventListener('click', function() {
+        openVideoModal(w.bvid, w.title);
+      });
+
+      if (w.cover) {
+        card.innerHTML += '<img class="work-cover" src="' + w.cover + '" alt="' + w.title + '" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">';
+        card.innerHTML += '<div class="work-cover" style="display:none;align-items:center;justify-content:center;background:linear-gradient(135deg,#f3f4f6,#e5e7eb);color:#d1d5db;font-size:2.5rem;">🎬</div>';
+      } else {
+        card.innerHTML += '<div class="work-cover" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f3f4f6,#e5e7eb);color:#d1d5db;font-size:2.5rem;">🎬</div>';
+      }
+
+      card.innerHTML +=
+        '<div class="work-info">' +
+          '<div class="work-title">' + w.title + '</div>' +
+          (w.desc ? '<div class="work-desc">' + w.desc + '</div>' : '') +
+        '</div>';
+
+      grid.appendChild(card);
+    });
+  }
+
+  // ---- 模态播放器 ----
+  function openVideoModal(bvid, title) {
+    var overlay = document.getElementById('video-modal');
+    var oldPlayer = document.getElementById('modal-player');
+
+    // 销毁旧 iframe，重建一个（避免缓存导致续播）
+    var newPlayer = oldPlayer.cloneNode(true);
+    oldPlayer.parentNode.replaceChild(newPlayer, oldPlayer);
+    newPlayer.src = 'https://player.bilibili.com/player.html?bvid=' + bvid + '&page=1&autoplay=1&t=0&_=' + Date.now();
+    newPlayer.id = 'modal-player';
+
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeVideoModal() {
+    var overlay = document.getElementById('video-modal');
+    var player = document.getElementById('modal-player');
+
+    // 彻底销毁 iframe，阻止后台继续播放
+    player.src = 'about:blank';
+    var newPlayer = player.cloneNode(true);
+    player.parentNode.replaceChild(newPlayer, player);
+    newPlayer.id = 'modal-player';
+
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // 关闭按钮
+  document.getElementById('modal-close').addEventListener('click', closeVideoModal);
+
+  // 点击遮罩层关闭
+  document.getElementById('video-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeVideoModal();
+  });
+
+  // ESC 键关闭
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeVideoModal();
+  });
+
+  // 先用静态数据渲染
+  function renderStatic() {
+    var check = setInterval(function() {
+      if (typeof works === 'undefined') return;
+      clearInterval(check);
+      renderWorks(works);
+    }, 50);
+  }
+
+  // 尝试用 API 获取最新数据
+  function tryApiUpdate() {
+    var check = setInterval(function() {
+      if (typeof fetchBilibiliVideos === 'undefined') return;
+      clearInterval(check);
+
+      fetchBilibiliVideos('285015360').then(function(apiWorks) {
+        if (apiWorks && apiWorks.length > 0) {
+          // API 成功！用新数据重新渲染
+          rendered = false;
+          document.getElementById('works-grid').innerHTML = '';
+          renderWorks(apiWorks);
+        }
+      });
+    }, 50);
+  }
+
+  renderStatic();
+  tryApiUpdate();
+})();
+</script>
+<!-- ========== 加载 about.js ========== -->
+<script>
+document.write('<script src="./about.js?v=' + Date.now() + '"><\/script>');
+</script>
+
+<!-- ========== 渲染「关于我」板块 ========== -->
+<script>
+(function renderAbout() {
+  var check = setInterval(function() {
+    if (typeof about === 'undefined') return;
+    clearInterval(check);
+
+    document.getElementById('about-intro').textContent = about.intro;
+
+    var grid = document.getElementById('hobby-grid');
+    about.hobbies.forEach(function(h) {
+      grid.innerHTML +=
+        '<div class="hobby-card">' +
+          '<span class="hobby-icon">' + h.icon + '</span>' +
+          '<div class="hobby-name">' + h.name + '</div>' +
+          '<div class="hobby-desc">' + h.desc + '</div>' +
+        '</div>';
+    });
+  }, 50);
+})();
 </script>
   </body>
 </html>
