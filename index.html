@@ -50,7 +50,7 @@ body{
   line-height:inherit;
   font-size:1rem;
   background-color:#d5cdd3;
-  background-image:url('bg.jpg');
+  background-image:url('images/bg.jpg');
   background-size:cover;
   background-position:center;
   background-attachment:fixed;
@@ -753,7 +753,7 @@ table td + td{
           <main class="grid my-16 gap-y-12">
             <div class="text-center">
               <div class="w-[calc(100%-2rem)] md:w-3/4 mx-auto">
-                <img src="profile.jpg" alt="个人照片" style="width:100%; max-width:100%; border-radius:12px; display:block;">
+                <img src="images/profile.jpg" alt="个人照片" style="width:100%; max-width:100%; border-radius:12px; display:block;">
               </div>
               <div class="mt-2">
                 <p>2026年2月于大连</p>
@@ -838,15 +838,15 @@ table td + td{
 </footer>
         </div>
     <script>
-document.write('<script src="./contact.js?v=' + Date.now() + '"><\/script>');
+document.write('<script src="./js/contact.js?v=' + Date.now() + '"><\/script>');
 </script>
 
 <script>
-document.write('<script src="./education.js?v=' + Date.now() + '"><\/script>');
+document.write('<script src="./js/education.js?v=' + Date.now() + '"><\/script>');
 </script>
 
 <script>
-document.write('<script src="./contest.js?v=' + Date.now() + '"><\/script>');
+document.write('<script src="./js/contest.js?v=' + Date.now() + '"><\/script>');
 </script>
 
 <script>
@@ -997,12 +997,12 @@ contests.forEach(contest => {
 
 <!-- ========== 加载 works.js（静态数据） ========== -->
 <script>
-document.write('<script src="./works.js?v=' + Date.now() + '"><\/script>');
+document.write('<script src="./js/works.js?v=' + Date.now() + '"><\/script>');
 </script>
 
 <!-- ========== 加载 bilibili.js（API 签名 + JSONP） ========== -->
 <script>
-document.write('<script src="./bilibili.js?v=' + Date.now() + '"><\/script>');
+document.write('<script src="./js/bilibili.js?v=' + Date.now() + '"><\/script>');
 </script>
 
 <!-- ========== 渲染「作品展示」板块（先用静态数据，API 成功后自动更新） ========== -->
@@ -1131,7 +1131,7 @@ document.write('<script src="./bilibili.js?v=' + Date.now() + '"><\/script>');
 </script>
 <!-- ========== 加载 about.js ========== -->
 <script>
-document.write('<script src="./about.js?v=' + Date.now() + '"><\/script>');
+document.write('<script src="./js/about.js?v=' + Date.now() + '"><\/script>');
 </script>
 
 <!-- ========== 渲染「关于我」板块 ========== -->
@@ -1155,5 +1155,13 @@ document.write('<script src="./about.js?v=' + Date.now() + '"><\/script>');
   }, 50);
 })();
 </script>
+<!-- ========== Live2D 看板娘 - 小黑（离线可用） ========== -->
+<script>console.log('[Live2D] 加载本地库...'); window.__live2d_debug = true;</script>
+<script src="js/live2dcubismcore.min.js"></script>
+<script src="js/pixi.min.js"></script>
+<script src="js/pixi-live2d-display.min.js"></script>
+<script src="js/live2d-data.js"></script>
+<script src="js/live2d-texture.js"></script>
+<script src="js/live2d.js"></script>
   </body>
 </html>
