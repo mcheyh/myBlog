@@ -127,7 +127,7 @@
         modelScale = Math.min(
           (size.w * 0.85) / (w || 1),
           (size.h * 0.80) / (h || 1),
-          0.78
+          1.0
         );
         if (modelScale <= 0.05) modelScale = 0.3;
         log('缩放比例:', modelScale);
